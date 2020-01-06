@@ -1,6 +1,10 @@
-/*Settings*/
 
-$font-color-main: rgba(189, 19, 19, 0.836);
+@import url('https://fonts.googleapis.com/css?family=Raleway:200|Ubuntu:700&display=swap&subset=latin-ext');
+
+/*Settings*/
+$font-color-main: rgb(255, 255, 255);
+$font-family-first: 'Raleway', sans-serif;
+$font-family-second: 'Ubuntu', sans-serif;
 
 /*Global*/
 
@@ -9,14 +13,18 @@ $font-color-main: rgba(189, 19, 19, 0.836);
 }
 
 body {
-    font-size: 20px;
+    font-size: 16px;
     color: $font-color-main;
+    font-family: $font-family-first;
 }
 
 .container { 
+    background-color: white;
     max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
+    color: black;
+    font-family: $font-family-first;
 }
 
 /*Header*/
@@ -25,15 +33,60 @@ header {
     display: flex;
     position: relative;
     flex-direction: column;
+    align-items: center;
+    max-height: 100vh;
+    
 }
 
-.splash 
-    img {
+.splash img {  
         object-fit: cover;
-        height: 100vh;
+        height: auto;
+        display: block ;
+        
 }
 
+.navigation { 
+    position: absolute;
 
-nav ul li {
-    display: inline;
+     nav {
+        display: flex;
+        font-family: $font-family-second;
+        align-items: center;
+    }    
+}
+
+nav ul {
+  right: 200px;
+    
+    li {
+        display: inline;
+        padding: 30px;
+    }
+}
+
+nav {
+  
+
+    a {
+        text-decoration: none;
+        color: $font-color-main;
+    }
+}
+
+.btn-one {
+    border: solid 2px;
+    padding: 12px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: $font-color-main;
+    
+}
+
+.splash-inner {
+    position: absolute;
+    text-align: center;
+    transform: translateY(150%);
+      h3 {
+        margin-bottom: 80px;
+    }
 }

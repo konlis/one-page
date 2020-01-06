@@ -1,26 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200|Ubuntu:700&display=swap&subset=latin-ext");
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
 body {
-  font-size: 20px;
-  color: rgba(189, 19, 19, 0.836);
+  font-size: 16px;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
 }
 .container {
+  background-color: white;
   max-width: 700px;
   margin: 0 auto;
   padding: 0 20px;
+  color: black;
+  font-family: "Raleway", sans-serif;
 }
 header {
   display: flex;
   position: relative;
   flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
 }
 .splash img {
   object-fit: cover;
-  height: 100vh;
+  height: auto;
+  display: block;
+}
+.navigation {
+  position: absolute;
+}
+.navigation nav {
+  display: flex;
+  font-family: "Ubuntu", sans-serif;
+  align-items: center;
+}
+nav ul {
+  right: 200px;
 }
 nav ul li {
   display: inline;
+  padding: 30px;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+.btn-one {
+  border: solid 2px;
+  padding: 12px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+}
+.splash-inner {
+  position: absolute;
+  text-align: center;
+  transform: translateY(150%);
+}
+.splash-inner h3 {
+  margin-bottom: 80px;
 }
