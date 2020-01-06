@@ -1,0 +1,39 @@
+/*Settings*/
+
+$font-color-main: rgba(189, 19, 19, 0.836);
+
+/*Global*/
+
+* , *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    color: $font-color-main;
+}
+
+.container { 
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*Header*/
+
+header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.splash 
+    img {
+        object-fit: cover;
+        height: 100vh;
+}
+
+
+nav ul li {
+    display: inline;
+}
