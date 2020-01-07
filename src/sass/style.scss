@@ -3,6 +3,7 @@
 
 /*Settings*/
 $font-color-main: rgb(255, 255, 255);
+$button-color: rgb(0, 255, 0);
 $font-family-first: 'Raleway', sans-serif;
 $font-family-second: 'Ubuntu', sans-serif;
 
@@ -15,14 +16,19 @@ $font-family-second: 'Ubuntu', sans-serif;
 body {
     font-size: 16px;
     color: $font-color-main;
-    font-family: $font-family-first;
+    
 }
+  h1 {
+        font-size: 50px;
+        font-weight: 100;
+        font-family: $font-family-first;
+    }
 
 .container { 
     background-color: white;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 100vw;
+    height: 100vh;
+    padding: 0 100px;
     color: black;
     font-family: $font-family-first;
 }
@@ -34,42 +40,42 @@ header {
     position: relative;
     flex-direction: column;
     align-items: center;
-    max-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     
-}
 
-.splash img {  
+    .splash-image {
         object-fit: cover;
-        height: auto;
-        display: block ;
+        height: 100%;
+        width: 100%;
         
-}
-
-.navigation { 
-    position: absolute;
-
-     nav {
-        display: flex;
-        font-family: $font-family-second;
-        align-items: center;
-    }    
-}
-
-nav ul {
-  right: 200px;
-    
-    li {
-        display: inline;
-        padding: 30px;
+    }
+    .navigation { 
+        position: absolute;
+        nav {
+            display: flex;
+            font-family: $font-family-second;
+            align-items: center;
+            ul {
+                li {
+                    display: inline;
+                    padding: 30px;
+                }
+            }
+        }    
     }
 }
 
 nav {
-  
-
     a {
         text-decoration: none;
         color: $font-color-main;
+    }
+    p {
+        font-size: 30px;
+    }
+    span {
+        color: $button-color;
     }
 }
 
@@ -79,6 +85,15 @@ nav {
     border-radius: 50px;
     text-decoration: none;
     color: $font-color-main;
+}
+.btn-second {
+    background-color: $button-color;
+    padding: 12px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: $font-color-main;
+    font-weight: bold;
+    
     
 }
 
@@ -86,7 +101,133 @@ nav {
     position: absolute;
     text-align: center;
     transform: translateY(150%);
-      h3 {
+    font-weight: lighter;
+    
+    h3 {
         margin-bottom: 80px;
+    }
+    span {
+        font-weight: 700;
+    }
+}
+
+/*About us section*/
+
+.about {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     display: relative;
+     h1::after {
+         content: '';
+         color: $button-color;
+         border: solid 1px;
+         display: block;
+         width: 50px;
+         position: absolute;
+     }
+     h3 {
+            color: gray;
+         }
+     .title {
+         margin: 30px 0;
+     }
+}
+
+.cards {
+    display: flex;
+    
+    .card {
+        padding: 50px 20px;
+        .icon {
+          padding: 50px 0;
+           
+                i {
+                    position: relative;
+                    display:flex;
+                    font-size: 50px;
+                    padding: 80px 0;
+                    align-items: center;
+                    justify-content: center;
+                }
+        }
+         i::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            border-radius: 100%; 
+            opacity: 0.5;
+            display: block;
+        }
+    }
+}
+
+/*Tight Containers*/
+
+.tight-container {
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    .title {
+        flex: 50%;
+        line-height: 2;
+        padding: 0 60px 0 20px;
+        h3 {
+            padding-bottom: 50px;
+        }
+    }
+    .container-image {
+        flex: 50%;
+        img {
+            width: 100%;
+            object-fit: cover;
+            padding: 20px;
+        }
+    }
+}
+
+.tight-one {
+    background-color: rgba(228, 228, 228, 0.404);
+}
+
+.tight-three {
+    background: black;
+    position: relative;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    .title {
+        position: absolute;
+        color: $font-color-main;
+        .page-title {
+        font-size: 30px;
+            span {
+                color: $button-color;
+            }
+        }
+        p {
+            text-align: center;
+        }
+    }
+    .title::before {
+                content: "";
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                background-repeat:no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-image: url('https://i.postimg.cc/KvkCdmNx/human-skull.jpg');
+                border-radius: 100%; 
+                display: block;
+
+    }
+    img {
+        max-height: 60vh;
+        object-fit: cover;
+        width: 100%;
+        opacity: 0.15;
     }
 }
