@@ -231,3 +231,59 @@ nav {
         opacity: 0.15;
     }
 }
+
+/*Our services*/
+
+.our-services {
+    background-color: rgba(228, 228, 228, 0.404);
+    margin: 0;
+    padding-top: 50px;
+    text-align: center;
+
+     .page-title::after {
+         content: '';
+         color: $button-color;
+         border: solid 1px;
+         display: block;
+         width: 50px;
+         position: absolute;
+         
+    }
+}
+.services {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+    .card {
+        display: flex;
+        padding: 50px 0;
+        text-align: left;
+        justify-content: center;
+
+        .icon {
+          padding: 50px 55px;
+            i {
+                position: relative;
+                display:flex;
+                font-size:35px;
+                align-items: center;
+                justify-content: center;
+                color: $button-color
+            }
+        }
+         i::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: $font-color-main;
+            border-radius: 100%; 
+            opacity: 0.5;
+            display: block;
+        }
+        .card-title {
+            max-width: 80%;
+        }
+    }
+}
