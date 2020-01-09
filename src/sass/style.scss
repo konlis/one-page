@@ -332,18 +332,37 @@ nav {
 .price-card {
     background-color: $font-color-main;
     margin: 20px;
-    border-radius: 20px;
+    border-radius: 5px;
     line-height: 2;
     .pricing-text {
-        margin: 20px;
+       
+        padding: 20px;
     }
     .purchase {
         display: flex;
         background-color: $button-color;
-        border-radius: 0 0 20px 20px;
+        border-radius: 0 0 5px 5px;
         align-items: center;
         justify-content: space-between;
         padding: 0 20px;
+        color: $font-color-main;
+        font-weight: 700;
     }
 }
 
+/*Footer*/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .copyright {
+        display: inline-block;
+    }
+
+    ul li {
+        display: inline-block;
+        text-decoration: none;
+    }
+}
