@@ -4,6 +4,7 @@
 /*Settings*/
 $font-color-main: rgb(255, 255, 255);
 $button-color: rgb(0, 255, 0);
+$backgroung-color-gray: rgba(228, 228, 228, 0.404);
 $font-family-first: 'Raleway', sans-serif;
 $font-family-second: 'Ubuntu', sans-serif;
 
@@ -323,3 +324,26 @@ nav {
 }
 
 /*Pricing*/
+
+.pricing {
+    background-color: $backgroung-color-gray;
+}
+
+.price-card {
+    background-color: $font-color-main;
+    margin: 20px;
+    border-radius: 20px;
+    line-height: 2;
+    .pricing-text {
+        margin: 20px;
+    }
+    .purchase {
+        display: flex;
+        background-color: $button-color;
+        border-radius: 0 0 20px 20px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
