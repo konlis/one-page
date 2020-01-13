@@ -3,6 +3,8 @@
 
 /*Settings*/
 $font-color-main: rgb(255, 255, 255);
+$font-textcolor-one: lightgray;
+$font-textcolor-two: darkgray;
 $button-color: rgb(0, 255, 0);
 $backgroung-color-gray: rgba(228, 228, 228, 0.404);
 $font-family-first: 'Raleway', sans-serif;
@@ -105,7 +107,7 @@ nav {
     &:hover {
         color: black;
         transition: all 0.5s;
-        border: solid 3px;
+        border: solid 2px;
         background-color: $font-color-main;
     }
     
@@ -146,6 +148,7 @@ nav {
          }
      .title {
          margin: 30px 0;
+         position: relative;
      }
 }
 
@@ -243,7 +246,7 @@ nav {
     }
     .title::before {
                 content: "";
-                position: absolute;
+                position: relative;
                 width: 150px;
                 height: 150px;
                 background-repeat:no-repeat;
@@ -252,7 +255,7 @@ nav {
                 background-image: url('https://i.postimg.cc/KvkCdmNx/human-skull.jpg');
                 border-radius: 100%; 
                 display: block;
-
+                right: -45%;
     }
     img {
         max-height: 60vh;
@@ -356,6 +359,11 @@ nav {
 
 .pricing {
     background-color: $backgroung-color-gray;
+    .title {
+        margin: 0;
+        padding: 50px 0;
+        text-align: center;
+    }
 }
 
 .price-card {
@@ -363,9 +371,29 @@ nav {
     margin: 20px;
     border-radius: 5px;
     line-height: 2;
+
     .pricing-text {
-       
         padding: 20px;
+
+        .page-title {
+            color: $button-color;
+        }
+        .page-subtitle {
+            color: $font-textcolor-one;
+        }
+
+        p {
+            color: $font-textcolor-two;
+            font-weight: 700;
+        }
+
+        h3::after {
+            content: '';
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            border: solid 1px;
+        }
     }
     .purchase {
         display: flex;
@@ -376,6 +404,13 @@ nav {
         padding: 0 20px;
         color: $font-color-main;
         font-weight: 700;
+
+        &:hover {
+            color: black;
+            background-color: $font-color-main;
+            border: solid 2px $button-color;
+            transition: all 0.5s;
+        }
     }
 }
 

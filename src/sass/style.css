@@ -83,7 +83,7 @@ nav span {
 .btn-second:hover {
   color: black;
   transition: all 0.5s;
-  border: solid 3px;
+  border: solid 2.5px;
   background-color: #fff;
 }
 .splash-inner {
