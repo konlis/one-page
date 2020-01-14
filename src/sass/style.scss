@@ -5,7 +5,7 @@
 $font-color-main: rgb(255, 255, 255);
 $font-textcolor-one: lightgray;
 $font-textcolor-two: darkgray;
-$button-color: rgb(0, 255, 0);
+$button-color: rgb(0, 255, 149);
 $backgroung-color-gray: rgba(228, 228, 228, 0.404);
 $font-family-first: 'Raleway', sans-serif;
 $font-family-second: 'Ubuntu', sans-serif;
@@ -417,14 +417,20 @@ nav {
 
 /*Dark tight-container try*/
 
-.try .page-title {
-    position: absolute;
-    text-align: center;
-    h1 {
-        color: $font-color-main;
-    }
-    span {
-            font-weight: 600;
+.try {
+    z-index: 1;
+    height: 60vh;
+
+    .page-title {
+        position: absolute;
+        text-align: center;
+        
+        h1 {
+            color: $font-color-main;
+        }
+        span {
+                font-weight: 600;
+        }
     }
 }
 
@@ -433,20 +439,36 @@ nav {
 .footer {
     display: flex;
     flex-direction: row;
-    justify: right;
     position: absolute;
 
     .copyright {
         display: flex;
         align-items: center;
+        font-weight: 700;
     }
 
     ul li {
         display: inline-block;
         text-decoration: none;
+        font-weight: 700;
+        color: $font-textcolor-two;
+    }
+    .footer-menu {
+        li:hover {
+            color: $button-color;
+        }
     }
 }
 
-.footer-icon i {
+.footer-icon {
+   
+
+        i {
         font-size: 1100px;
+        transform: translate(0, -45%);
+        z-index: 0;
+        color: blueviolet;
+        opacity: 0.1;
+
     }
+}
