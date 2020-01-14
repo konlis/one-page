@@ -193,6 +193,7 @@ nav {
         i:hover::after  {
                         background-color: $button-color;
                         opacity: 1;
+                        transition: all 0.3s;
                     }
     }
 }
@@ -414,15 +415,30 @@ nav {
     }
 }
 
+/*Dark tight-container try*/
+
+.try .page-title {
+    position: absolute;
+    text-align: center;
+    h1 {
+        color: $font-color-main;
+    }
+    span {
+            font-weight: 600;
+    }
+}
+
 /*Footer*/
 
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify: right;
+    position: absolute;
 
     .copyright {
-        display: inline-block;
+        display: flex;
+        align-items: center;
     }
 
     ul li {
@@ -431,3 +447,6 @@ nav {
     }
 }
 
+.footer-icon i {
+        font-size: 1100px;
+    }
