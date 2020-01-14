@@ -365,6 +365,9 @@ nav span {
 .try .page-title span {
   font-weight: 600;
 }
+.foo {
+  justify-content: center;
+}
 .footer {
   display: flex;
   flex-direction: row;
